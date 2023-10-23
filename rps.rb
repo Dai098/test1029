@@ -52,8 +52,9 @@ puts "ーーーーーーーーーーーーーーー"
 
 #あっち向いてホイの結果勝ったか負けたかを表示させたい
 case result
- when player_hand2 == program_hand2 then
+when "じゃんけん勝ちパターン" || player_hand2 == program_hand2 then
   puts "あなたの勝ちです"
- else
-  puts "あなたの負けです"
 end
+
+#ゲームの実行
+janken
