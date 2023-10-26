@@ -7,7 +7,7 @@ def janken
   puts "[0]:グー、[1]:チョキ、[2]:パー、[3]:戦わない"
   puts "0〜2の数字から選んで・・・ホイ！"
   
-  player_hand = gets.to_i
+  player_hand = gets.to_i #変数に値を代入
   if !(player_hand == 0 || player_hand == 1 || player_hand == 2)
     player_hand = 3
   end
@@ -50,11 +50,18 @@ directions = ["上","下","左","右"]
 puts "あなた：#{directions[player_hand2]} 相手：#{directions[program_hand2]}"
 puts "ーーーーーーーーーーーーーーー"
 
-#あっち向いてホイの結果勝ったか負けたかを表示させたい
-case result
-when "じゃんけん勝ちパターン" || player_hand2 == program_hand2 then
-  puts "あなたの勝ちです"
+#勝者はじゃんけんに勝ったプレーヤーにしたい
+#resultの結果を付け加える
+if result == 1
+elsif player_hand2 == program_hand2
+  puts "あなたの負けです"
+else
+  janken
 end
 
-#ゲームの実行
-janken
+if result == 2
+elsif player_hand2 == program_hand2
+  puts "あなたの勝ちです"
+else
+  janken
+end
