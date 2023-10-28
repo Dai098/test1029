@@ -1,7 +1,7 @@
 require "csv"
+puts "あっち向いてホイゲームを始めます"
 
 def janken
-  puts "あっち向いてホイゲームを始めます"
   
   while true
    puts "最初はグー！じゃんけん...ホイ！"
