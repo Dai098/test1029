@@ -12,7 +12,7 @@ def janken
   
    if player_hand == 3 #プレイヤーが戦わないを選んだ時の処理
      puts "じゃんけんゲームが放棄されました。ゲームを終了します。"
-     return
+     exit
    end
   
    jankens = ["グー","チョキ","パー","戦わない"]
@@ -47,9 +47,9 @@ def acci_muite_hoi
    
    if player_choice == computer_choice
      puts "あなたの勝ちです！"
-     puts "次のゲームに移りましょう！"
+     puts "ゲームを終了します。"
      puts "ーーーーーーーーーーーーーーーーーーー"
-     janken
+     exit(0)
    else
      puts "勝負がつかなかったのでもう一度試しましょう！"
      puts "ーーーーーーーーーーーーーーーーーーー"
